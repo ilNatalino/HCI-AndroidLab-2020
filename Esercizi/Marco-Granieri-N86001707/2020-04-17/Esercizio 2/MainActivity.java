@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setTitle("Esercizio2 - MARCO GRANIERI");
         final TextView textView = findViewById(R.id.T1);
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
