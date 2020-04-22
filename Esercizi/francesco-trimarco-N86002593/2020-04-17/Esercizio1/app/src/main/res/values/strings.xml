@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Esercizio 1</string>
+    <string name="empty_string" />
+    <string name="shift">Shift</string>
+</resources>
