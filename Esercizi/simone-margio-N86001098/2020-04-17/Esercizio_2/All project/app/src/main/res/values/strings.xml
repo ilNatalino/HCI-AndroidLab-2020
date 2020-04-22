@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EsercizioRelativeLayout</string>
+    <string name="tex1">TextView</string>
+    <string name="tex2">TextView</string>
+    <string name="Bottone1">Button</string>
+    <string name="Bottone">Meow 🐱</string>
+    <string name="Text1">TextView</string>
+    <string name="Text2">TextView</string>
+</resources>
