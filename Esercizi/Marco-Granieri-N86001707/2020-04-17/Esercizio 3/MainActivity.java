@@ -1,31 +1,42 @@
-package com.example.esercizio2;
+package com.example.esercizio3;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.RelativeLayout;
+import android.util.Log;
 import android.widget.Button;
+import android.view.View;
+import android.widget.RadioGroup;
+import android.widget.RadioButton;
+import androidx.appcompat.app.AlertDialog;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String LOG = "APPANDROID";
+    public static int count = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle("Esercizio2 - MARCO GRANIERI");
-        final TextView textView = findViewById(R.id.T1);
-        Button button = findViewById(R.id.button);
+        getSupportActionBar().setTitle("Esercizio3 - MARCO GRANIERI");
+        final Button button = findViewById(R.id.button);
+        final RadioGroup radioGroup = findViewById(R.id.radiogroup);
         button.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
             @Override
             public void onClick(View view) {
-                RelativeLayout.LayoutParams layoutParameters = (RelativeLayout.LayoutParams)textView.getLayoutParams();
-                layoutParameters.topMargin = layoutParameters.topMargin == 0 ? 20 : 0;
-                layoutParameters.setMarginStart(layoutParameters.topMargin);
-                textView.setLayoutParams(layoutParameters);
+                Log.i(LOG, "Rilevata pressione sul bottone");
+                if (count < 15) {
+                    RadioButton newButton = new RadioButton(getApplicationContext());
+                    String title = "Button " + String.valueOf(count);
+                    newButton.setText(title);
+                    radioGroup.addView(newButton);
+                    newButton.setChecked(true);
+                    count++;
+                }
+                else {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(button.getContext());
+                    builder.setTitle("Impossibile eseguire l'azione");
+                    builder.setMessage("Ci sono troppi RadioButton!");
+                    builder.show();
+                }
             }
         });
     }
