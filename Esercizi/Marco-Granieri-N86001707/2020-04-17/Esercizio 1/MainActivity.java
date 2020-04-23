@@ -10,11 +10,13 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
     private final static String LOG ="APPANDROID";
-    public boolean checkVisibility(int currentTextView, int nextTextView) {
-        TextView text = findViewById(currentTextView);
-        if (text.isShown()) {
-            text.setVisibility(TextView.INVISIBLE);
-            findViewById(nextTextView).setVisibility(TextView.VISIBLE);
+    public boolean checkTextView(int currentTextView, int previousTextView) {
+        TextView textView = findViewById(currentTextView);
+        if (!textView.getText().toString().equals("")) {
+            String str = textView.getText().toString();
+            textView.setText("");
+            textView = findViewById(previousTextView);
+            textView.setText(str);
             return true;
         }
         return false;
@@ -24,15 +26,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setTitle("Esercizio1 - MARCO GRANIERI");
-        Button botton = findViewById(R.id.button);
-        botton.setOnClickListener(new View.OnClickListener() {
+        Button button = findViewById(R.id.button);
+        final int[] textViews = new int[] {R.id.textView5, R.id.textView4, R.id.textView3, R.id.textView2, R.id.textView1};
+        final int length = textViews.length;
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i(LOG, "Rilevata pressione sul bottone");
-                int[] textViews = new int[] {R.id.textView1, R.id.textView2, R.id.textView3, R.id.textView4, R.id.textView5};
-                int length = textViews.length;
-                for (int i = 0; i < length; i++) {
-                    if (checkVisibility(textViews[i], textViews[(i+1) % length]))
+                for (int i = 0; i < length ; i++) {
+                    if (checkTextView(textViews[i], textViews[(i+1) % length]))
                         break;
                 }
             }
