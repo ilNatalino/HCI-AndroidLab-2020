@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Esercizio 1</string>
+    <string name="ciao_mi_chiamo_pippo">Ciao mi chiamo pippo</string>
+    <string name="textview">TextView</string>
+    <string name="premi">Premi</string>
+    <string name="button">Button</string>
+</resources>
