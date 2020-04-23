@@ -1,0 +1,11 @@
+<resources>
+<string name="app_name">Exercise 2</string>
+<string name="start_exercise_1">Start Exercise 1</string>
+<string name="start_exercise_2">Start Exercise 2</string>
+<string name="start_exercise_3">Start Exercise 3</string>
+<string name="rotate_text">Rotate Text</string>
+<string name="change_margin">Change Margin</string>
+<string name="very_bad_joke">42 is a good number :D</string>
+<string name="io">Acciaro Gennaro Daniele\nN86002324</string>
+<string name="add_radiobutton">Add new RadioButton</string>
+</resources>

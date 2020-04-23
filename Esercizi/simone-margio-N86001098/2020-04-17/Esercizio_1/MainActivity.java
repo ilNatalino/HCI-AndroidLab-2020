@@ -11,6 +11,31 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TextView text1=(TextView) findViewById(R.id.textView1);
+        TextView text2=(TextView) findViewById(R.id.textView2);
+        TextView text3=(TextView) findViewById(R.id.textView3);
+        TextView text4=(TextView) findViewById(R.id.textView4);
+        TextView text5=(TextView) findViewById(R.id.textView5);
+        text1.setText("🐱");
+        setEmptyOrText(text2,"");
+        setEmptyOrText(text3,"");
+        setEmptyOrText(text4,"");
+        setEmptyOrText(text5,"");
+    }
+
+    private void setEmptyOrText(TextView text, String s){
+        if(s.equals("")){
+            text.setText("");
+        }else text.setText(s);
+    }
+
+    private boolean checkEmpty(TextView text){
+        String s= (String) text.getText();
+        return !s.equals("");
+    }
+
+    private String getText(TextView text){
+        return  (String) text.getText();
     }
 
     public void changeVisibility(View v){
@@ -20,29 +45,32 @@ public class MainActivity extends AppCompatActivity {
         TextView text4=(TextView) findViewById(R.id.textView4);
         TextView text5=(TextView) findViewById(R.id.textView5);
 
-        if(text1.isShown()){
-            text1.setVisibility(TextView.INVISIBLE);
-            text2.setVisibility(TextView.VISIBLE);
-        } else{
-            if(text2.isShown()){
-                text2.setVisibility(TextView.INVISIBLE);
-                text3.setVisibility(TextView.VISIBLE);
+        if(checkEmpty(text1)){
+            setEmptyOrText(text5,getText(text1));
+            setEmptyOrText(text1,"");
+        }else{
+            if(checkEmpty(text2)){
+                setEmptyOrText(text1,getText(text2));
+                setEmptyOrText(text2,"");
             }else{
-                if(text3.isShown()){
-                    text3.setVisibility(TextView.INVISIBLE);
-                    text4.setVisibility(TextView.VISIBLE);
+                if(checkEmpty(text3)){
+                    setEmptyOrText(text2,getText(text3));
+                    setEmptyOrText(text3,"");
                 }else{
-                    if(text4.isShown()){
-                        text4.setVisibility(TextView.INVISIBLE);
-                        text5.setVisibility(TextView.VISIBLE);
+                    if(checkEmpty(text4)){
+                        setEmptyOrText(text3,getText(text4));
+                        setEmptyOrText(text4,"");
                     }else{
-                        if(text5.isShown()){
-                            text5.setVisibility(TextView.INVISIBLE);
-                            text1.setVisibility(TextView.VISIBLE);
+                        if(checkEmpty(text5)){
+                            setEmptyOrText(text4,getText(text5));
+                            setEmptyOrText(text5,"");
                         }
                     }
                 }
             }
         }
+
+
+
     };
 }

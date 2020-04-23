@@ -18,7 +18,7 @@ Al click di un Button, il testo si sposta in alto (a rotazione).
 
 # Svolgimento
 ## Funzionamento
-![Alt Text](https://media.giphy.com/media/W6oP2xVefdArFHcXvB/giphy.gif)
+![Alt Text](https://media.giphy.com/media/SYbygBY4nPoP9tjRko/giphy.gif)
 
 ## Versione
 ### Progetto
