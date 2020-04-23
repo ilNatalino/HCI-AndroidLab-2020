@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView T5 = (TextView)findViewById(R.id.textView5);
 
         Button b = (Button)findViewById(R.id.button);
+
         b.setOnClickListener(new View.OnClickListener(){
 
             @Override
