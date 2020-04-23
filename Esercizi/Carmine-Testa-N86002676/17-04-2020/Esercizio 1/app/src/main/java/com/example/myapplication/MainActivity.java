@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void swap(TextView T , float x , float y){
+    public void swap(TextView T , float x , float y){
         T.setY(y);
         T.setX(x);
     }
