@@ -17,7 +17,6 @@ public class MainActivity extends Activity {
     private TextView temp;
     private Button button;
     private RelativeLayout rl;
-    int vert, hor;
 
 
     @Override
