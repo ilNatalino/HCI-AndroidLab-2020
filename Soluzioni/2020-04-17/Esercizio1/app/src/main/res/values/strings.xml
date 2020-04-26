@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Esercizio 1</string>
+    <string name="shift_button">Shift</string>
+    <string name="main_text">Text to shift</string>
+</resources>
