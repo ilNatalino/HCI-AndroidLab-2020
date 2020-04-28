@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 T1.setLayoutParams(params);
             }
         });
+
     }
     public int randomNumber(int limite){
         return (int) (Math.random()*limite);
