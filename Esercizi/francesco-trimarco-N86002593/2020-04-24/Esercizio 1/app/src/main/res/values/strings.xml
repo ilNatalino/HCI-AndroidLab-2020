@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Esercizio 1</string>
+    <string name="pass_values_to_act2">Pass values to Act2</string>
+    <string name="edit_text_2">Edit text 2</string>
+    <string name="edit_text_1">Edit text 1</string>
+    <string name="lorem_ipsum">Lorem ipsum</string>
+
+    <string name="firstValuePassedIs">First value passed is: %1$s</string>
+    <string name="secondValuePassedIs">Second value passed is: %1$s</string>
+    <string name="close_activity">Close activity</string>
+    <string name="start_first_version_activity">Start first version activity</string>
+    <string name="start_activity_with_object">Start activity with Object</string>
+    <string name="change_version">Change version</string>
+    <string name="n86002593">Francesco Trimarco\nN86002593</string>
+</resources>
